@@ -1,0 +1,8 @@
+import math
+x = int(input("Введите x: "))
+y = int(input("Введите y: "))
+z = int(input("Введите z: "))
+min1 = min(y**2, (x+y-z)/5)
+min2 = min(y**2, (x+y-z)/y)
+u = max(((5+2*x)/min1), min2)
+print("u =", u)
