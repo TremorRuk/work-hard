@@ -1,13 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-X = np.genfromtxt('13X.txt')
+X = np.genfromtxt('13x.txt')
 print('Исходный массив X')
 print(X)
 
 N = len(X)
 
-Y = np.genfromtxt('13Y.txt')
+Y = np.genfromtxt('13y.txt')
 print('Исходный массив Y')
 print(Y)
 
