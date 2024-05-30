@@ -1,0 +1,35 @@
+def sum_positive_elements(vector):
+
+  sum = 0
+  for element in vector:
+    if element > 0:
+      sum += element
+  return sum
+
+
+def find_column_with_max_sum(matrix):
+  max_sum = 0
+  max_column = 0
+  for column in range(len(matrix[0])):
+    column_vector = [row[column] for row in matrix]
+    current_sum = sum_positive_elements(column_vector)
+    if current_sum > max_sum:
+      max_sum = current_sum
+      max_column = column
+  return max_column
+
+
+def print_column(matrix, column):
+
+  print(f"Элементы столбца {column}:")
+  for row in matrix:
+    print(row[column])
+
+
+with open("matrix.txt", "r") as file:
+  lines = file.readlines()
+  matrix = [[int(x) for x in line.split()] for line in lines]
+
+max_column = find_column_with_max_sum(matrix)
+
+print_column(matrix, max_column)
